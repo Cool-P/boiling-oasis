@@ -1,0 +1,7 @@
+<% if @result == 'success' %>
+	$('p.signout-result').html('The <%=@speical_report.title %> report is signed out');
+	$('#resultModal').modal('open');
+<% else %>
+	$('p.signout-result').html('The email and/or password entered is/are incorrect.');
+	$('#resultModal').modal('open');
+<% end %>

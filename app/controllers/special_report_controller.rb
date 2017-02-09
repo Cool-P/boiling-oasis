@@ -50,15 +50,21 @@ class SpecialReportController < ApplicationController
   end
 
   def sign_out
+    @special_report = @description.special_reports.find(params[:report_id])
     
   end
 
   def set_description
     @description = Description.find(params[:id])
+    @result = 'success'
   end
 
   def special_report_params
     params.require("special_report").permit(:title, :final_diagnosis, :gross_description, :blockcode, :microscopic_description, :assign, :lock)
+  end
+
+  def signout_params
+    params.require("sign_out").permit(:email, :password)
   end
 
 end
