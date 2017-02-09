@@ -1,6 +1,6 @@
 class SpecialReportController < ApplicationController
 
-  before_action: set_description
+  before_action :set_description
   
   #GET 
   def index
