@@ -22,7 +22,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3" >Block code:</label>
     <div class="col-sm-9"> 
-      <select name="special_report[:blockcode]" class="form-control", value="<%= @special_report.blockcode %>" >
+      <select name="special_report[blockcode]" class="form-control", value="<%= @special_report.blockcode %>" >
       	<% BlockCode.all.each do |blockcode| %>
       		<option value="<%= blockcode.id %>"><%= blockcode.block_description %></option>      	
       	<% end %>
@@ -38,7 +38,7 @@
   <div class="form-group">
     <label class="control-label col-sm-3" >Assign to:</label>
     <div class="col-sm-9"> 
-      <select name="special_report[:assign]" class="form-control", value="<%= @special_report.assign %>" >
+      <select name="special_report[assign]" class="form-control", value="<%= @special_report.assign %>" >
       	<% User.all.each do |user| %>
       		<option value="<%= user.id %>"><%= user.email %></option>      	
       	<% end %>
