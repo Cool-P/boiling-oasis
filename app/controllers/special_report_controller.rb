@@ -41,10 +41,10 @@ class SpecialReportController < ApplicationController
   def delete
     @special_report = @description.special_reports.find(params[:report_id])
     respond_to do |format|
-      if @special_report.save
+      if @special_report.destroy
         format.html{ redirect_to "#{description_path}#special", notice: "A special report was successfully deleted!" }
       else
-        format.html { render :new }
+        format.html { render :edit }
       end
     end
   end
