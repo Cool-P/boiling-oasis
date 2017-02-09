@@ -58,7 +58,7 @@ class SpecialReportController < ApplicationController
   end
 
   def special_report_params
-    params.require("special_report").permit(:title, :final_diagnosis, :gross_description, :blockcode, :microscopic_description, :assign, :lock)
+    params.require("special_report").permit(:title, :final_diagnosis, :gross_description, :blockcode, :microscopic_description, :assign)
   end
 
 end
