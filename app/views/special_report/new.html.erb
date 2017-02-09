@@ -1,27 +1,28 @@
 <!-- create special report -->
 
+<h1>Add new special report</h1>
 <%= form_for :special_report, url: create_special_report_path(@description.id), html: {class: "form-horizontal"} do |f| %>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Title:</label>
-    <div class="col-sm-10">
+    <label class="control-label col-sm-4" for="email">Title:</label>
+    <div class="col-sm-8">
     	<%= f.text_field :title, :class => 'form-control'%>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Final description:</label>
-    <div class="col-sm-10"> 
+    <label class="control-label col-sm-4" >Final description:</label>
+    <div class="col-sm-8"> 
       <%= f.text_field :final_diagnosis, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Gross description:</label>
-    <div class="col-sm-10"> 
+    <label class="control-label col-sm-4" >Gross description:</label>
+    <div class="col-sm-8"> 
       <%= f.text_field :gross_description, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Block code:</label>
-    <div class="col-sm-10"> 
+    <label class="control-label col-sm-4" >Block code:</label>
+    <div class="col-sm-8"> 
       <select name="special_report[:blockcode]" class="form-control">
       	<% BlockCode.all.each do |blockcode| %>
       		<option value="<%= blockcode.id %>"><%= blockcode.block_description %></option>      	
@@ -30,14 +31,14 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Micropscopic description:</label>
-    <div class="col-sm-10"> 
-      <%= f.text_field :microscopic_description, :class => 'form-control' %>
+    <label class="control-label col-sm-4" >Micropscopic description:</label>
+    <div class="col-sm-8"> 
+      <%= f.text_area :microscopic_description, :class => 'form-control' %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Assign to:</label>
-    <div class="col-sm-10"> 
+    <label class="control-label col-sm-4" for="pwd">Assign to:</label>
+    <div class="col-sm-8"> 
       <select name="special_report[:blockcode]" class="form-control">
       	<% User.all.each do |user| %>
       		<option value="<%= user.id %>"><%= user.email %></option>      	
@@ -47,11 +48,8 @@
   </div>
   
   <div class="form-group"> 
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <button type="submit" class="btn btn-default">Save and Exit</button>
-    </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <a href="#" class="btn btn-default signout-report">Sign out</a>
-    </div>
+    <div class="col-sm-offset-4 col-sm-10">
+      <button type="submit" class="btn btn-primary">Save and Exit</button>
+    </div>   
   </div>  
 <% end %>
