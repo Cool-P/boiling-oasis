@@ -51,7 +51,12 @@ class SpecialReportController < ApplicationController
 
   def sign_out
     @special_report = @description.special_reports.find(params[:report_id])
-    @result = 'success'        
+    if @special_report.update(:lock => params[:sign_out][:email])
+      @result = 'success' 
+    else
+      @result = 'failure'
+    end
+           
   end
 
   def set_description
