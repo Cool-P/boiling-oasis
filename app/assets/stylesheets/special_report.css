@@ -4,7 +4,5 @@
 */
 
 .nav > li > a {
-    position: relative;
-    display: block;
-    padding: 10px 13px;
+    padding: 10px 13px !important;
 }
