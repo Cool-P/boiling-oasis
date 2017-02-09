@@ -40,7 +40,7 @@
     <div class="col-sm-10"> 
       <select name="special_report[:assign]" class="form-control", value="<%= @special_report.assign %>" >
       	<% User.all.each do |user| %>
-      		<option value="<%= user.id %>"><%= user.name %></option>      	
+      		<option value="<%= user.id %>"><%= user.eamil %></option>      	
       	<% end %>
       </select>
     </div>
