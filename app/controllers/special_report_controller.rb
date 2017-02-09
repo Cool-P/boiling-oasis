@@ -30,7 +30,7 @@ class SpecialReportController < ApplicationController
   def update
     @special_report = @description.special_reports.find(params[:report_id])
     respond_to do |format|
-      if @special_report.update
+      if @special_report.update(special_report_params)
         format.html{ redirect_to "#{description_path}#special", notice: "A special report was successfully updated!" }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class SpecialReportController < ApplicationController
   end
 
   def special_report_params
-    params.require("special_report").permit(:title, :final_diagnosis, :gross_description, :blockcode, :microscopic_description, :assign)
+    params.require("special_report").permit(:title, :final_diagnosis, :gross_description, :blockcode, :microscopic_description, :assign, :lock)
   end
 
 end
