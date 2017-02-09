@@ -56,7 +56,10 @@ class SpecialReportController < ApplicationController
     else
       @result = 'failure'
     end
-           
+    respond_to do |f|      
+      f.js { render layout: false, content_type: 'text/javascript' }
+      f.html
+    end           
   end
 
   def set_description
