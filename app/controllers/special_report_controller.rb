@@ -24,11 +24,11 @@ class SpecialReportController < ApplicationController
   end
 
   def edit
-    @special_report = @description.special_reports.find(params[:reoprt_id])
+    @special_report = @description.special_reports.find(params[:report_id])
   end
 
   def update
-    @special_report = @description.special_reports.find(params[:reoprt_id])
+    @special_report = @description.special_reports.find(params[:report_id])
     respond_to do |format|
       if @special_report.update
         format.html{ redirect_to "#{description_path}#special", notice: "A special report was successfully updated!" }
@@ -39,7 +39,7 @@ class SpecialReportController < ApplicationController
   end
 
   def delete
-    @special_report = @description.special_reports.find(params[:reoprt_id])
+    @special_report = @description.special_reports.find(params[:report_id])
     respond_to do |format|
       if @special_report.save
         format.html{ redirect_to "#{description_path}#special", notice: "A special report was successfully deleted!" }

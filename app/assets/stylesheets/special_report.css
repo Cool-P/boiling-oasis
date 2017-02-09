@@ -6,3 +6,12 @@
 .nav > li > a {
     padding: 10px 13px !important;
 }
+
+#special{
+	padding: 20px 10px;
+}
+
+#special a{
+	color: #fff !important;
+	margin: 10px !important;
+}
