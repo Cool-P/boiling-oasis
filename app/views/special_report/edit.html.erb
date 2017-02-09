@@ -23,7 +23,7 @@
     <label class="control-label col-sm-2" for="pwd">Block code:</label>
     <div class="col-sm-10"> 
       <select name="special_report[:blockcode]" class="form-control", value="<%= @special_report.blockcode %>" >
-      	<% Block_code.all.each do |blockcode| %>
+      	<% BlockCode.all.each do |blockcode| %>
       		<option value="<%= blockcode.id %>"><%= blockcode.block_description %></option>      	
       	<% end %>
       </select>
