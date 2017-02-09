@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'descriptions/:id/specialreport/:report_id/edit'      => 'special_report#edit', as: :edit_special_report
   post 'descriptions/:id/specialreport/:report_id/update'   => 'special_report#update', as: :update_special_report
   get 'descriptions/:id/specialreport/:report_id/delete'    => 'special_report#delete', as: :delete_special_report
-  post 'descriptions/:id/specialreport/:report_id/signout'    => 'special_report#signout', as: :signout_special_report
+  post 'descriptions/:id/specialreport/:report_id/signout'    => 'special_report#sign_out', as: :signout_special_report
 
 
   #patient is as a function of description
