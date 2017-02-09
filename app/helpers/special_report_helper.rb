@@ -1,0 +1,2 @@
+module SpecialReportHelper
+end

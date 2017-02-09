@@ -10,5 +10,7 @@ class Description < ActiveRecord::Base
 	has_one :body_measurement
 	has_one :provisional_diagnosis
 	has_one :final_diagnosis
+	has_many :special_reports
+
 	#has_many :block_codes
 end

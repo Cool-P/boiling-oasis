@@ -25,6 +25,7 @@ class DescriptionsController < ApplicationController
 	  if ! @description.patient.nil?
 		@patient = @description.patient
 	  end
+    
   end
 
   def create
