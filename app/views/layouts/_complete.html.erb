@@ -145,9 +145,9 @@
     <% unless @description.special_reports.nil? %>
       <% @description.special_reports.all.each do |report| %>
       <% if report.lock.nil? %>
-        <%= link_to report.title, edit_special_report_path(@description.id, report.id), class: 'btn btn-primary' %>  
+        <%= link_to report.title, edit_special_report_path(@description.id, report.id), class: 'btn btn-success' %>  
       <% else %>
-        <%= link_to "#{report.title} Sign out", edit_special_report_path(@description.id, report.id), class: 'btn btn-primary' %>  
+        <%= link_to "#{report.title} Sign out", edit_special_report_path(@description.id, report.id), class: 'btn btn-success' %>  
       <% end %>      
       <br>
       <% end %>      
