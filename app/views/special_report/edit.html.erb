@@ -2,26 +2,26 @@
 <h1>Edit special report</h1>
 <%= form_for :special_report, url: update_special_report_path(@special_report.id), html{ class: 'form-horizontal' } do |f| %>
   <div class="form-group">
-    <label class="control-label col-sm-4" for="email">Title:</label>
-    <div class="col-sm-8">
+    <label class="control-label col-sm-3" for="email">Title:</label>
+    <div class="col-sm-9">
     	<%= f.text_field :title, :class => 'form-control', value: @special_report.title %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" >Final description:</label>
-    <div class="col-sm-8"> 
+    <label class="control-label col-sm-3" >Final description:</label>
+    <div class="col-sm-9"> 
       <%= f.text_field :final_diagnosis, :class => 'form-control', value: @special_report.final_description %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" >Gross description:</label>
-    <div class="col-sm-8"> 
+    <label class="control-label col-sm-3" >Gross description:</label>
+    <div class="col-sm-9"> 
       <%= f.text_field :gross_description, :class => 'form-control', value: @special_report.gross_description %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" >Block code:</label>
-    <div class="col-sm-8"> 
+    <label class="control-label col-sm-3" >Block code:</label>
+    <div class="col-sm-9"> 
       <select name="special_report[:blockcode]" class="form-control", value="<%= @special_report.blockcode %>" >
       	<% BlockCode.all.each do |blockcode| %>
       		<option value="<%= blockcode.id %>"><%= blockcode.block_description %></option>      	
@@ -30,14 +30,14 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" >Micropscopic description:</label>
-    <div class="col-sm-8"> 
-      <%= f.text_area :microscopic_description, :class => 'form-control', value: @special_report.microscopic_description %>
+    <label class="control-label col-sm-3" >Micropscopic description:</label>
+    <div class="col-sm-9"> 
+      <%= f.text_area :microscopic_description, :class => 'form-control', value: @special_report.microscopic_description, rows: 10 %>
     </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" >Assign to:</label>
-    <div class="col-sm-8"> 
+    <label class="control-label col-sm-3" >Assign to:</label>
+    <div class="col-sm-9"> 
       <select name="special_report[:assign]" class="form-control", value="<%= @special_report.assign %>" >
       	<% User.all.each do |user| %>
       		<option value="<%= user.id %>"><%= user.eamil %></option>      	
@@ -47,13 +47,13 @@
   </div>
   
   <div class="form-group"> 
-    <div class="col-sm-offset-4 col-sm-2">
+    <div class="col-sm-offset-3 col-sm-3">
       <button type="submit" class="btn btn-primary">Save and Exit</button>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <a href="#" class="btn btn-success signout-report">Sign out</a>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <a href="<%= delete_special_report_path(@description.id, @special_report.id) %>" class="btn btn-danger">Delete</a>
     </div>
   </div>  
