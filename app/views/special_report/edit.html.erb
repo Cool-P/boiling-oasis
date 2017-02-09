@@ -83,13 +83,13 @@
 <div id="loginModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <!-- Modal content-->
-    <%= form_for :sign_out, url: signout_special_report_path(@description.id, @special_report.id), remote: true, method: :post do |f|%>
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Log in for Sign out</h4>
       </div>
-      <div class="modal-body form-horizontal">
+      <%= form_for :sign_out, url: signout_special_report_path(@description.id, @special_report.id), remote: true, method: :post do |f|%>
+          <div class="modal-body form-horizontal">
         <div class="form-group">
           <label class="control-label col-sm-3" >Login:</label>
           <div class="col-sm-9">

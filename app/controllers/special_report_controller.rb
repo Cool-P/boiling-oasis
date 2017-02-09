@@ -51,12 +51,16 @@ class SpecialReportController < ApplicationController
 
   def sign_out
     @special_report = @description.special_reports.find(params[:report_id])
+    @result = 'success'
+    respond_to do |format|
+      format.js   { }
+    end
     
   end
 
   def set_description
     @description = Description.find(params[:id])
-    @result = 'success'
+
   end
 
   def special_report_params
