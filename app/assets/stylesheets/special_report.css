@@ -16,3 +16,10 @@
 	color: #fff !important;
 	margin: 10px !important;
 }
+
+p.signout-result{
+	font-size: 18px;
+	margin: 20px;
+	color: green;
+	line-height: 30px;
+}

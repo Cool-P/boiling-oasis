@@ -1,6 +1,6 @@
 	$('#loginModal').modal('hide');
 <% if @result == 'success' %>
-	$('p.signout-result').html('The <%=@special_report.title %> report is signed out');
+	$('p.signout-result').html('The <b><%=@special_report.title %></b> report is signed out');
 <% else %>
 	$('p.signout-result').html('The email and/or password entered is/are incorrect.');
 <% end %>
